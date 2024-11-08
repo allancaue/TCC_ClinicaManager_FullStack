@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'api',
 
     #Django Rest Framework
-    'rest_framework'
+    'rest_framework',
+
+    #WebSocket
+    'channels'
 ]
 
 MIDDLEWARE = [
