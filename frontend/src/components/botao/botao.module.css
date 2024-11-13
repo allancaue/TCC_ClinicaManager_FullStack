@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.conteiner {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 310px;
+    padding: 15px 10px;
+    gap: 10px;
+    border-radius: 20px;
+    background-color: var(--azul-claro);
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    transition: all 0.3s ease; /* Transição suave para mudanças de propriedades */
+}
+
+.conteiner svg {
+    font-size: 30px;
+    stroke-width: 15;
+}
+
+/* Animação para quando o mouse passa por cima */
+.conteiner:hover {
+    cursor: pointer;
+    transform: scale(1.05); /* Aumenta um pouco o tamanho */
+}
+
+/* Animação para quando o botão é clicado */
+.conteiner:active {
+    transform: scale(0.95); /* Reduz um pouco o tamanho */
+}
+
+@media (max-width: 1500px){
+    .conteiner {
+        font-size: 20px;
+    }
+}

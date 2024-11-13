@@ -1,14 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import ResponsiveAppBar from './components/ResponsiveAppBar';
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+import {Outlet} from "react-router-dom";
+import {AuthProvider} from "./context/AuthContext";
 
+export default function App() {
+    const queryClient = new QueryClient()
 
-function App() {
-  return (
-    <div className="App">
-     <ResponsiveAppBar />
-    </div>
-  );
+    return (
+        <AuthProvider>
+            <QueryClientProvider client={queryClient}>
+                <Outlet/>
+            </QueryClientProvider>
+        </AuthProvider>
+    )
 }
-
-export default App;
